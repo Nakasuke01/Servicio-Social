@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { GraduationCap, Mail, Phone, MapPin } from 'lucide-react';
 
 /**
@@ -33,16 +34,26 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <h4 className="text-white font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2">
-              {['Inicio', 'Procesos', 'Guías', 'Documentos'].map((item) => (
-                <li key={item}>
-                  <a 
-                    href="#" 
-                    className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link to="/procesos" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  Procesos
+                </Link>
+              </li>
+              <li>
+                <Link to="/guias" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  Guías
+                </Link>
+              </li>
+              <li>
+                <Link to="/documentos" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  Documentos
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -51,36 +62,24 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-semibold mb-4">Recursos</h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="/sitios" 
-                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
-                >
+                <Link to="/sitios" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
                   Sitios Web
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="/preguntas" 
-                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
-                >
+                <Link to="/preguntas" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
                   Preguntas Frecuentes
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="/documentos" 
-                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
-                >
+                <Link to="/documentos" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
                   Documentos
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="/contacto" 
-                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
-                >
+                <Link to="/contacto" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
                   Contacto
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -90,28 +89,19 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="/aviso-legal" 
-                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
-                >
+                <Link to="/aviso-legal" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
                   Aviso Legal
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="/aviso-legal/privacidad" 
-                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
-                >
+                <Link to="/aviso-legal/privacidad" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
                   Política de Privacidad
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="/aviso-legal/terminos" 
-                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
-                >
+                <Link to="/aviso-legal/terminos" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
                   Términos de Uso
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

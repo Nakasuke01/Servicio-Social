@@ -25,7 +25,7 @@ export interface ProcessStep {
   title: string;
   description: string;
   details?: string[];
-  relatedGuideId?: string | null;
+  relatedGuideId?: string | null  ;
 }
 
 export interface School {

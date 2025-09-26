@@ -448,7 +448,7 @@ export const documents: Document[] = [
   {
     id: 'formato-registro-ss',
     title: 'Formato de Registro de Prestador de Servicio Social',
-    description: 'Formato oficual para el registro del prestador del servicio social',
+    description: 'Formato oficial para el registro del prestador del servicio social',
     category: 'Registros',
     format: 'pdf',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1uKzvG7wed0ffNW7vet2f2C9XEbYjuEiM'
@@ -476,6 +476,14 @@ export const documents: Document[] = [
     category: 'Informes',
     format: 'pdf',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1EcYSn74rhnlzSxXKB4ZkSlufoqz9O9dd'
+  },
+  {
+    id: 'reportes-bimestrales',
+    title: 'Formato de Reportes Bimestrales',
+    description: 'Formato oficial para registrar las actividades bimestrales de los prestadores que realizan el servicio social de manera anticipada.',
+    category: 'Informes',
+    format: 'word',
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1jYeAvM6j6GahtSYFefjVTr6hSzi3oClR'
   },
   
 ];
@@ -530,7 +538,7 @@ export const faqs: FAQ[] = [
   {
     id: '2',
     question: '¿Qué documentos necesito para registrar a un adulto?',
-    answer: 'Los documentos necesarios son: CURP actualizada, acta de nacimiento, comprobante de domicilio reciente y fotografías tamaño infantil. También se requiere completar el formato de registro oficial.',
+    answer: 'Los documentos necesarios son: CURP actualizada, acta de nacimiento, comprobante de domicilio reciente y fotografía digital. También se requiere completar el formato de registro oficial.',
     category: 'Registro'
   },
   {
@@ -545,12 +553,12 @@ export const faqs: FAQ[] = [
     answer: 'Los documentos digitales se suben a la plataforma Google Classroom designada para tu escuela. También debes entregar copias físicas a los voluntarios del IEEA.<br><br><a href="https://classroom.google.com/c/Njg5NDA2ODk1MTAy?cjc=2iaiaqt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors mt-3"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>Ir a Google Classroom</a>',
     category: 'Documentos'
   },
-  {
-    id: '5',
-    question: '¿Qué pasa si un adulto no aprueba el examen?',
-    answer: 'Si un adulto no aprueba el examen, se debe brindar apoyo adicional y preparación para una nueva oportunidad. No se firman las evidencias hasta que haya aprobado satisfactoriamente.',
-    category: 'Evaluaciones'
-  }
+  //{
+   // id: '5',
+   // question: '¿Qué pasa si un adulto no aprueba el examen?',
+   // answer: 'Si un adulto no aprueba el examen, se debe brindar apoyo adicional y preparación para una nueva oportunidad. No se firman las evidencias hasta que haya aprobado satisfactoriamente.',
+   // category: 'Evaluaciones'
+  //}
 ];
 
 // INFORMACIÓN DE CONTACTO

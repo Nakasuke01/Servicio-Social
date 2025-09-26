@@ -54,12 +54,11 @@ const Home: React.FC = () => {
               >
                 Comenzar Servicio Social
               </a>
-              <a 
-                href="/procesos"
-                className="border border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-800 transition-colors text-center"
+              <Link to="/procesos"
+              className="border border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-800 transition-colors text-center"
               >
-                Conocer Más
-              </a>
+              Conocer Más
+              </Link>
             </div>
           </div>
         </div>
@@ -202,6 +201,7 @@ const Home: React.FC = () => {
                 <div className="bg-gray-700 p-4 rounded-lg">
                   <h4 className="text-lg font-medium text-white mb-2">Requisitos (Copias):</h4>
                   <ul className="text-gray-300 space-y-1">
+                    <li>• Ser mayor de 18 años</li>
                     <li>• Certificado de primaria</li>
                     <li>• CURP</li>
                     <li>• Acta de nacimiento</li>
