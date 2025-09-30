@@ -16,7 +16,7 @@ export const announcements: Announcement[] = [
     id: '1',
     title: 'Convocatoria Servicio Social 2025-2',
     description: 'Apertura de registro para estudiantes de preparatoria y universidad',
-    date: '2025-09-30',
+    date: '2025-09-31',
     type: 'convocatoria',
     content: `
       <h3>Convocatoria para Servicio Social 2025-2</h3>
@@ -52,7 +52,7 @@ export const announcements: Announcement[] = [
     id: '2',
     title: 'Entrega de Certificados Septiembre',
     description: 'Ceremonia de entrega de certificados de educación básica',
-    date: '2025-09-30',
+    date: '2025-09-31',
     type: 'noticia',
     content: `
       <h3>Ceremonia de Entrega de Certificados</h3>
