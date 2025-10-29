@@ -98,7 +98,7 @@ export const schools: School[] = [
         title: 'Entrega de papelería personal y registro',
         description: 'Presentar documentos personales (Copias) y completar registro inicial',
         details: [
-          'CURP actualizada',
+          'CURP actualizada (Certificada)',
           'Acta de Nacimiento',
           'INE',
           'Recibo de luz (no mayor a 3 meses)',
@@ -129,7 +129,7 @@ export const schools: School[] = [
         title: 'Solicitar papelería de los adultos y llenar registros',
         description: 'Recopilar documentación (Copias) necesaria de cada adulto',
         details: [
-          'CURP del adulto',
+          'CURP del adulto (Certificada)',
           'Acta de nacimiento',
           'INE',
           'Recibo de luz (no mayor a 3 meses)',
@@ -277,75 +277,6 @@ export const schools: School[] = [
 // GUÍAS DETALLADAS
 export const guides: Guide[] = [
   {
-    id: 'reconocimiento-saberes',
-    title: 'Guía de Reconocimiento de Saberes',
-    description: 'Proceso completo para certificar conocimientos previos de adultos',
-    content: `
-      <h3>¿Qué es el Reconocimiento de Saberes?</h3>
-      <p>Es un proceso mediante el cual se evalúan y certifican los conocimientos, habilidades y competencias que una persona ha adquirido a lo largo de su vida, independientemente de cómo los haya obtenido.</p>
-      
-      <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Proceso de evaluación" style="width: 100%; max-width: 600px; height: auto; margin: 20px 0; border-radius: 8px;" />
-      
-      <h3>Objetivos del Programa</h3>
-      <ul>
-        <li>Certificar la educación básica de adultos</li>
-        <li>Reconocer aprendizajes previos</li>
-        <li>Facilitar la continuidad educativa</li>
-        <li>Promover la inclusión social</li>
-      </ul>
-      
-      <img src="https://images.pexels.com/photos/5427648/pexels-photo-5427648.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Certificación educativa" style="width: 100%; max-width: 600px; height: auto; margin: 20px 0; border-radius: 8px;" />
-      
-      <h3>Proceso Paso a Paso</h3>
-      <ol>
-        <li><strong>Diagnóstico inicial:</strong> Evaluación de conocimientos previos</li>
-        <li><strong>Documentación:</strong> Recopilación de evidencias</li>
-        <li><strong>Evaluación:</strong> Examen de competencias</li>
-        <li><strong>Certificación:</strong> Expedición de documento oficial</li>
-      </ol>
-    `,
-    //como poner video en guia
-    //videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    //como poner enlaces relacionados
-    //relatedLinks: [
-      //{ title: 'Sistema IEEA Nacional', url: 'https://www.ieea.gob.mx' },
-      //{ title: 'Plataforma de Evaluación', url: '#' }
-    //],
-    //Para agregar la descarga de un archivo
-    //downloadUrl: '#'
-  },
-  {
-    id: 'registro-adultos',
-    title: 'Registro de Adultos en el Sistema',
-    description: 'Proceso detallado para registrar nuevos beneficiarios',
-    content: `
-      <h3>Requisitos de Registro</h3>
-      <p>Para registrar un adulto en el sistema IEEA, es necesario contar con la siguiente documentación:</p>
-      
-      <h4>Documentos Obligatorios (Copias):</h4>
-      <ul>
-        <li>CURP actualizada</li>
-        <li>Acta de nacimiento</li>
-        <li>INE</li>
-        <li>Recibo de Luz (No mayor a 3 meses)</li>
-        <li>Certificado de primaria (Para hacer la secundaria)</li>
-        <li>Fotografia (Se la tomas con el celular)</li>
-      </ul>
-      
-      <img src="https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Documentos requeridos" style="width: 100%; max-width: 600px; height: auto; margin: 20px 0; border-radius: 8px;" />
-      
-      <h4>Proceso de Verificación:</h4>
-      <ol>
-        <li>Validar documentos originales</li>
-        <li>Verificar datos en sistema nacional</li>
-        <li>Generar expediente digital</li>
-        <li>Asignar clave única de beneficiario</li>
-      </ol>
-    `,
-   // videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-   // downloadUrl: '#'
-  },
-  {
     id: 'generar-rfe',
     title: 'Como generar el RFE y crear el correo Institucional',
     description: 'Proceso detallado Generar el RFE y generar el correo institucional',
@@ -440,6 +371,46 @@ export const guides: Guide[] = [
     `,
    // videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
       downloadUrl: 'https://drive.google.com/uc?export=download&id=1fmLMTWOM-mPsEBTVm7YYRyXNyqJV7o_9'
+  },
+  {
+    id: 'llenar-regMonae',
+    title: 'Como llenar el registro de prestador del servicio',
+    description: 'Proceso detallado sobre como llenar la hoja de registro de prestador de servicio',
+    content: `
+      <h3><b>Descargar abajo el pdf de un ejemplo de llenado de registro</b></h3>
+
+      
+      
+    `,
+   // videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      downloadUrl: 'https://drive.google.com/uc?export=download&id=1caqkNe2giAtBDZ1ZL1OQZJnfXIs9V9No'
+  },
+  {
+    id: 'llenar-regEdu',
+    title: 'Como llenar el registro del Beneficiario (Adulto que quiere obtener su certificado)',
+    description: 'Proceso detallado sobre como llenar la hoja de registro del Beneficiario',
+    content: `
+      <h3><b>Descargar abajo el pdf de un ejemplo de llenado de registro</b></h3>
+
+      
+      
+    `,
+   // videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      downloadUrl: 'https://drive.google.com/uc?export=download&id=1foalWxDZJhpEcTWxTGSCTXLAjye107sz'
+  },
+  {
+    id: 'sol-dupli',
+    title: 'Como solicitar un duplicado de certificado',
+    description: 'Proceso detallado sobre como solicitar un duplicado de certificado',
+    content: `
+    <p><b>Cabe aclarar que la solicitud de duplicados es para personas que lo obtuvieron antes del 2016</b></p>
+      <p><b>Descargar abajo el pdf de un ejemplo de llenado de registro</b></p>
+
+      
+      
+    `,
+   // videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      downloadUrl: 'https://drive.google.com/uc?export=download&id=1I-waeXPrdzWXNU4EGTB6fBxp4X7kkdhF'
   },
 ];
 
@@ -553,6 +524,24 @@ export const faqs: FAQ[] = [
     answer: 'Los documentos digitales se suben a la plataforma Google Classroom designada para tu escuela. También debes entregar copias físicas a los voluntarios del IEEA.<br><br><a href="https://classroom.google.com/c/Njg5NDA2ODk1MTAy?cjc=2iaiaqt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors mt-3"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>Ir a Google Classroom</a>',
     category: 'Documentos'
   },
+  {
+    id: '5',
+    question: 'Si un adulto me aparece como dado de baja al buscarlo en el sistema, ¿le puedo aplicar el Reconocimiento de Saberes?',
+    answer: 'Lo más probable es que se le pueda aplicar un examen llamado Diagnóstico. En este deberá obtener una calificación mínima de 9 para poder recibir su certificado. Tendrias que solicitar un diagnostico y una vez entregado se podria ver si les permitio subirlo al sistema o no, si no les permitio no se calificara.',
+    category: 'Registro'
+  },
+  {
+    id: '6',
+    question: 'Si un adulto me aparece con Secundaria (Nivel Avanzado) concluida en el sistema, ¿le puedo aplicar el Reconocimiento de Saberes?',
+    answer: 'No, y no se te puede contar para el servicio. Si solo tiene concluida la primaria, sí le podrías aplicar el de Secundaria; pero si no cuenta con el certificado de primaria, primero se tendría que solicitar un duplicado.',
+    category: 'Registro'
+  },
+  {
+    id: '7',
+    question: 'Tengo jóvenes menores de 18 años, ¿puedo aplicarles el Reconocimiento de Saberes?',
+    answer: 'No, pero puedes aplicarles el examen Diagnóstico a los jóvenes de 15 años o más. Si obtienen una calificación de 9, lo aprueban y ese certificado puede contarse para tu servicio social.',
+    category: 'Registro'
+  },
   //{
    // id: '5',
    // question: '¿Qué pasa si un adulto no aprueba el examen?',
@@ -582,8 +571,8 @@ export const schoolContacts: SchoolContact[] = [
     },
     institution: {
       name: 'Departamento de Servicio Social',
-      phone: '+52 (55) 2222-2222',
-      email: 'prueba@tecnologico.edu.mx'
+      phone: '+52 ',
+      email: ''
     }
   },
   {

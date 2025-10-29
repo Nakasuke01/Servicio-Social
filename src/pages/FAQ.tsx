@@ -140,14 +140,14 @@ const FAQ: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-gray-800 p-6 rounded-lg">
                     <h3 className="text-lg font-semibold text-white mb-2">Contacto General</h3>
-                    <p className="text-gray-300 text-sm mb-2">+52 (55) 1234-5678</p>
-                    <p className="text-gray-300 text-sm">contacto@ieea.gob.mx</p>
+                    <p className="text-gray-300 text-sm mb-2">+52 481-145-4356</p>
+                    <p className="text-gray-300 text-sm"></p>
                   </div>
                   
                   <div className="bg-gray-800 p-6 rounded-lg">
                     <h3 className="text-lg font-semibold text-white mb-2">Horario de Atención</h3>
                     <p className="text-gray-300 text-sm mb-1">Lunes a Viernes</p>
-                    <p className="text-gray-300 text-sm">8:00 AM - 6:00 PM</p>
+                    <p className="text-gray-300 text-sm">8:00 AM - 3:00 PM</p>
                   </div>
                 </div>
               </div>

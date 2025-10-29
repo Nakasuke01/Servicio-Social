@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '../components/UI/Card';
 import Disclaimer from '../components/UI/Disclaimer';
-import { GraduationCap, Users, Award, BookOpen, Calendar, AlertCircle } from 'lucide-react';
+import { GraduationCap, Users, Award, BookOpen, Calendar, AlertCircle, StoreIcon } from 'lucide-react';
 import { announcements } from '../data/content';
 
 /**
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
                   <strong>Certifica tus conocimientos en un solo día</strong>. Presenta un examen y, 
                   si lo acreditas, recibe de inmediato tu certificado de primaria o 
                   secundaria. Es la manera más rápida de validar todo lo que has 
-                  aprendido en la vida.
+                  aprendido en la vida. <strong>Solo para mayores de 18.</strong>
                 </p>
               </CardContent>
             </Card>
@@ -160,10 +160,10 @@ const Home: React.FC = () => {
                   <h4 className="text-lg font-medium text-white mb-2">Requisitos (Copias):</h4>
                   <ul className="text-gray-300 space-y-1">
                     <li>• Ser mayor de 15 años</li>
-                    <li>• CURP</li>
+                    <li>• CURP (Certificada)</li>
                     <li>• Acta de nacimiento</li>
                     <li>• Recibo de Luz (No mayor a 3 meses)</li>
-                    <li>• Foto (La puedes tomar con tu celular)</li>
+                    <li>• Foto (La puedes tomar con tu celular con fondo de un solo color)</li>
                   </ul>
                 </div>
               </CardContent>
@@ -181,11 +181,11 @@ const Home: React.FC = () => {
                   <ul className="text-gray-300 space-y-1">
                     <li>• Ser mayor de 18 años</li>
                     <li>• Saber leer y escribir</li>
-                    <li>• CURP</li>
+                    <li>• CURP (Certificada)</li>
                     <li>• Acta de nacimiento</li>
                     <li>• Recibo de Luz (No mayor a 3 meses)</li>
                     <li>• INE</li>
-                    <li>• Foto (La puedes tomar con tu celular)</li>
+                    <li>• Foto (La puedes tomar con tu celular con fondo de un solo color)</li>
                   </ul>
                 </div>
               </CardContent>
@@ -203,11 +203,11 @@ const Home: React.FC = () => {
                   <ul className="text-gray-300 space-y-1">
                     <li>• Ser mayor de 18 años</li>
                     <li>• Certificado de primaria</li>
-                    <li>• CURP</li>
+                    <li>• CURP (Certificada)</li>
                     <li>• Acta de nacimiento</li>
                     <li>• Recibo de Luz (No mayor a 3 meses)</li>
                     <li>• INE</li>
-                    <li>• Foto (La puedes tomar con tu celular)</li>
+                    <li>• Foto (La puedes tomar con tu celular con fondo de un solo color)</li>
                   </ul>
                 </div>
               </CardContent>
