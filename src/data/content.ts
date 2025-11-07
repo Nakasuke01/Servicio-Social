@@ -422,7 +422,7 @@ export const documents: Document[] = [
     description: 'Formato oficial para el registro del prestador del servicio social',
     category: 'Registros',
     format: 'pdf',
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=1uKzvG7wed0ffNW7vet2f2C9XEbYjuEiM'
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=14wumThLzXKvqR7sipEMdjE1k4DzAlseb'
   },
   {
     id: 'formato-registro',
@@ -430,7 +430,7 @@ export const documents: Document[] = [
     description: 'Formato oficial para el registro de nuevos adultos en el programa',
     category: 'Registros',
     format: 'pdf',
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=13zqWun9lI0rUfYFOIOIhebPUir0xXiOC'
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1_-9ILRyeoL_1j4TM9-tGonVRR6a9uUTq'
   },
   {
     id: 'hoja-respuestas',
@@ -540,6 +540,18 @@ export const faqs: FAQ[] = [
     id: '7',
     question: 'Tengo jóvenes menores de 18 años, ¿puedo aplicarles el Reconocimiento de Saberes?',
     answer: 'No, pero puedes aplicarles el examen Diagnóstico a los jóvenes de 15 años o más. Si obtienen una calificación de 9, lo aprueban y ese certificado puede contarse para tu servicio social.',
+    category: 'Registro'
+  },
+  {
+    id: '8',
+    question: 'En el caso de que un adulto no cuente con los servicios básicos (luz, agua o teléfono) en su domicilio y, por lo tanto, carezca de los recibos correspondientes, ¿Cuál es el procedimiento para comprobar su residencia?',
+    answer: 'Cuando se comprueba la ausencia de servicios y la consecuente falta de recibos, se aplica una excepción. El solicitante deberá presentar únicamente: copia de su INE, CURP, Acta de Nacimiento y su respectiva Hoja de Registro. Si el trámite es para ingreso a secundaria, también deberá anexar el Certificado de Primaria.',
+    category: 'Registro'
+  },
+  {
+    id: '9',
+    question: 'Si el adulto vive en EE. UU. o en el extranjero desde hace mucho tiempo, ¿cómo comprobamos su domicilio en México? ',
+    answer: 'Se aplica un plan especial: si el adulto va a visitar su casa en México, o si usted lo visitará en EE. UU., puede usar este método. Debe entregar: CURP, Acta de Nacimiento y la Hoja de Registro. En lugar de su recibo, puede usar un recibo de luz, agua o teléfono de la persona que lo recibirá o visitará (es decir, su recibo).',
     category: 'Registro'
   },
   //{
