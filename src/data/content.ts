@@ -99,12 +99,13 @@ export const schools: School[] = [
         description: 'Presentar documentos personales (Copias) y completar registro inicial',
         details: [
           'CURP actualizada (Certificada)',
-          'Acta de Nacimiento',
-          'INE',
+          'Acta de Nacimiento (Legible)',
+          'INE (Obligatoria en los que hacen el servicio social)',
           'Recibo de luz (no mayor a 3 meses)',
           'Fotografía (se toma en el momento con el celular)',
-          'Constancia de estudios y Carta de presentación (original y 2 copias de cada uno) - <a href="https://forms.gle/AqT4D1yiCVb9Yrpr8" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">Solicitar aquí</a>',
-          'Formato de registro lleno'
+          'Constancia de estudios y Carta de presentación (original y copia de cada uno) - <a href="https://forms.gle/AqT4D1yiCVb9Yrpr8" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">Solicitar aquí</a>',
+          'Formato de registro lleno',
+    
         ],
         relatedGuideId: null
       },
@@ -552,6 +553,12 @@ export const faqs: FAQ[] = [
     id: '9',
     question: 'Si el adulto vive en EE. UU. o en el extranjero desde hace mucho tiempo, ¿cómo comprobamos su domicilio en México? ',
     answer: 'Se aplica un plan especial: si el adulto va a visitar su casa en México, o si usted lo visitará en EE. UU., puede usar este método. Debe entregar: CURP, Acta de Nacimiento y la Hoja de Registro. En lugar de su recibo, puede usar un recibo de luz, agua o teléfono de la persona que lo recibirá o visitará (es decir, su recibo).',
+    category: 'Registro'
+  },
+  {
+    id: '10',
+    question: 'Que información va en el Plan de Trabajo del servicio social y otros parecidos ',
+    answer: 'Depedencia: INSTITUTO ESTATAL DE EDUCACION PARA ADULTOS --- Programa para los de Septimo en adelante: Programa Nacional Alfabetizatec "Brigradas TECNM en Movimiento Nacional por la Alfabetización ---- Programa para los que adelantan Servicio (1-6): CONSTRUYENDO TU SERVICIO SOCIAL EN ALFABETIZATEC ----- Objetivo: Alfabetizar y certificar la educación básica (primaria y secundaria) a personas mayores de 15 años. --- Responsable del programa donde se realiza el servicio social y cargo: Ing.Luis Moran Hernandez, coordinador de la zona 2406 --- Jefa de la oficina de servicio social del tecnologico: C.P. Margarita Infante Zapuche',
     category: 'Registro'
   },
   //{
