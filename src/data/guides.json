@@ -1,0 +1,135 @@
+[
+  {
+  "id": "generar-rfe",
+  "title": "Como generar el RFE y crear el correo Institucional",
+  "description": "Proceso detallado Generar el RFE y generar el correo institucional",
+  "guideType": "procedimientos",
+  "institutions": ["todas"],
+  "content": [
+    "<h3>🚀 Registro del Adulto (Generación de RFE)</h3>",
+    "<p>Como prestador de servicio social, el primer paso para apoyar a una persona es generar su <b>RFE</b>. Este código es indispensable para que el apoyo educativo que brindas quede registrado oficialmente.</p>",
+    "",
+    "<p><strong>🌐 Acceso al Portal</strong></p>",
+    "<p>Entra al portal con los datos del adulto (nombre, fecha de nacimiento, etc.) para obtener su código único:</p>",
+    "<a href='http://168.255.120.53:8080/consultaRFE/' target='_blank' rel='noopener noreferrer'>Generar RFE del Adulto aquí</a>",
+    "",
+    "<p><strong>📧 ¿Para qué sirve este código?</strong></p>",
+    "<p>El RFE del adulto servirá para crear la cuenta de seguimiento o el correo institucional bajo el siguiente formato:</p>",
+    "",
+    "<h4>Estructura del correo:</h4>",
+    "<ul>",
+    "  <li><b>24:</b> Clave de nuestra zona educativa.</li>",
+    "  <li><b>H / M:</b> Sexo del adulto (Hombre o Mujer).</li>",
+    "  <li><b>RFE:</b> El código que obtuviste en el portal.</li>",
+    "  <li><b>@inea.gob.mx:</b> Dominio oficial del instituto.</li>",
+    "</ul>",
+    "",
+    "<p><b>Ejemplo visual del formato:</b></p>",
+    "<p><i>24 + [Sexo] + [RFE del Adulto] @inea.gob.mx</i></p>",
+    "",
+    "<h3>⚠️ Nota Importante</h3>",
+    "<p>Sin el RFE del adulto, no podrás darlo de alta en el sistema para que reciba su certificado de primaria o secundaria. Asegúrate de que los datos coincidan exactamente con su identificación oficial.</p>"
+  ],
+  "//videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  "images": [
+    "https://i.postimg.cc/9FCV4kC7/RFE.png",
+    "https://i.postimg.cc/sgBVyh36/correo.png"
+  ],
+  "relatedLinks": [
+    { "title": "Generador de RFE", "url": "http://168.255.120.53:8080/consultaRFE/" }
+  ],
+  "//downloadUrl": "#"
+},
+  {
+    "id": "validar-adulto-sistema",
+    "title": "Como verificar si se le puede aplicar a un adulto",
+    "description": "Proceso detallado sobre como checar si un adulto esta en el sistema del INEA",
+    "content": [
+      "<h3><b>Verificación en el Sistema</b></h3>",
+      "<p>Ingresa al siguiente sitio: <b><a href='http://www.inea.gob.mx/servicios_en_linea/Consulta_avance_academico.html'>Portal de Avance Académico</a></b></p>",
+      "<p>O en Google escribe <b>Avance Academico INEA</b>, a veces por sobre saturación cambian el link.</p>",
+      "<br>",
+      "<p>Te mandará al siguiente sitio, solo debes seleccionar un estado y poner el RFE (el RFE es el mismo dato que el RFC).",
+      "Debes repetir este proceso con todos los estados, aunque estemos en SLP, existe la posibilidad de que haya conseguido el certificado en otro estado.</p>",
+      "<h4>Interpretación de Resultados</h4>",
+      "<p>¿Cómo saber si puede ingresar? Existen 4 posibles resultados. Si arroja lo mostrado en la imagen puede entrar, da igual el nivel (Primaria o Secundaria).</p>",
+      "<h4>Casos Especiales de Situación Académica</h4>",
+      "<p>La otra opción es que te arroje información. Si en el área de <b>Etapa</b> dice 'Avanzado' y en <b>Situación</b> sale que 'Concluyó', no le puedes aplicar ningún examen; solo se solicita el duplicado.</p>",
+      "<p>Si en etapa dice 'Intermedio' y que 'Concluyó', se le podría aplicar el de secundaria, pero debes solicitar duplicado del de primaria.</p>",
+      "<p>Si en situación sale <b>Baja</b>, es un volado: se podría registrar, pero el sistema podría bloquear el examen. Si es baja en avanzada y terminó aquí la primaria, solicita duplicado.</p>"
+    ],
+    "images": [
+      "https://i.postimg.cc/BQfSs6j4/V1.png",
+      "https://i.postimg.cc/wMfQXPyk/v2.png",
+      "https://i.postimg.cc/cJG4mB3q/v3.png"
+    ],
+  "relatedLinks": [
+    { "title": "Verificador de avance academico IEEA", "url": "http://www.inea.gob.mx/servicios_en_linea/Consulta_avance_academico.html" }
+  ],
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=14dysM6bd2JcliNSYSwNDvAFPXurUaJVY"
+  },
+  {
+    "id": "llenar-acuse",
+    "title": "Como llenar un acuse",
+    "description": "Proceso detallado sobre como llenar un acuse de entrega de certificado",
+    "content": [
+      "<h3><b>Llenado del Acuse</b></h3>",
+      "<p>Aunque aún no se te dará el certificado, es necesario que los adultos firmen los acuses.</p>",
+      "<p>Para ello es necesario que llenen solo el área indicada. Deben imprimir todo el acuse y el cuadro NO se recorta.</p>"
+    ],
+    "images": [
+      "https://i.postimg.cc/tCrBWBLT/Guia-llenado-de-Acuses.png"
+    ],
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1bJ1l0YPD2PXvBZy8lCCSiRiA2R--3a9U"
+  },
+  {
+    "id": "llenar-hres",
+    "title": "Como llenar la hoja de respuestas",
+    "description": "Proceso detallado sobre como llenar la hoja de respuestas",
+    "content": [
+      "<h3><b>Llenado de la hoja de respuestas</b></h3>",
+      "<p>Nombres y firmas van con <b>lapicero de tinta azul</b>.</p>",
+      "<p>Todos los demás datos y el llenado de los círculos de respuestas se realizan con <b>lápiz</b>.</p>"
+    ],
+    "images": [
+      "https://i.postimg.cc/cL2T5r1G/Guia-llenado-hoja-de-respuestas.jpg"
+    ],
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1fmLMTWOM-mPsEBTVm7YYRyXNyqJV7o_9"
+  },
+  {
+    "id": "llenar-regMonae",
+    "title": "Como llenar el registro de prestador del servicio",
+    "description": "Proceso detallado sobre como llenar la hoja de registro de prestador de servicio",
+    "content": [
+      "<h3><b>Registro del Prestador de Servicio</b></h3>",
+      "<p>Haz clic en el botón de abajo para descargar un PDF con el ejemplo de llenado correcto para el registro del prestador.</p>",
+      "<p>Dale al boton que dice Descargar Documento Original.</p>"
+    ],
+    "images": [],
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1caqkNe2giAtBDZ1ZL1OQZJnfXIs9V9No"
+  },
+  {
+    "id": "llenar-regEdu",
+    "title": "Como llenar el registro del Beneficiario",
+    "description": "Proceso detallado sobre como llenar la hoja de registro del Beneficiario",
+    "content": [
+      "<h3><b>Registro del Beneficiario (Adulto)</b></h3>",
+      "<p>En la parte inferior encontrarás el botón de descarga con el formato de ejemplo para el registro de los adultos que desean obtener su certificado.</p>",
+      "<p>Dale al boton que dice Descargar Documento Original.</p>"
+    ],
+    "images": [],
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1foalWxDZJhpEcTWxTGSCTXLAjye107sz"
+  },
+  {
+    "id": "sol-dupli",
+    "title": "Como solicitar un duplicado de certificado",
+    "description": "Proceso detallado sobre como solicitar un duplicado de certificado",
+    "content": [
+      "<h3><b>Solicitud de Duplicados</b></h3>",
+      "<p><b>Nota importante:</b> La solicitud de duplicados es exclusivamente para personas que obtuvieron su certificado <b>antes del año 2016</b>.</p>",
+      "<p>Dale al boton que dice Descargar Documento Original.</p>"
+    ],
+    "images": [],
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1I-waeXPrdzWXNU4EGTB6fBxp4X7kkdhF"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "question": "¿Cuántos certificados debo lograr durante mi servicio social?",
+    "answer": "El objetivo es lograr 3 certificados mediante el proceso de reconocimiento de saberes. Estos certificados corresponden a la educación básica: alfabetización, primaria y secundaria.",
+    "category": ["General"]
+  },
+  {
+    "id": "2",
+    "question": "¿Qué documentos necesito para registrar a un adulto?",
+    "answer": "Los documentos necesarios son: CURP actualizada, acta de nacimiento, comprobante de domicilio reciente y fotografía digital. También se requiere completar el formato de registro oficial.",
+    "category": "Registro"
+  },
+  {
+    "id": "3",
+    "question": "¿Con qué frecuencia debo entregar informes?",
+    "answer": "Los informes deben ser presentados de manera bimestral (cada 2 meses). Estos informes incluyen el progreso de los beneficiarios y las actividades realizadas.",
+    "category": "Informes"
+  },
+  {
+    "id": "4",
+    "question": "¿Dónde subo los documentos digitales?",
+    "answer": "Los documentos digitales se suben a la plataforma Google Classroom designada para tu escuela. También debes entregar copias físicas a los voluntarios del IEEA.<br><br><a href=\"https://classroom.google.com/c/Njg5NDA2ODk1MTAy?cjc=2iaiaqt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors mt-3\"><svg class=\"w-4 h-4 mr-2\" fill=\"currentColor\" viewBox=\"0 0 20 20\"><path d=\"M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z\"></path><path d=\"M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z\"></path></svg>Ir a Google Classroom</a>",
+    "category": "Documentos"
+  },
+  {
+    "id": "5",
+    "question": "Si un adulto me aparece como dado de baja al buscarlo en el sistema, ¿le puedo aplicar el Reconocimiento de Saberes?",
+    "answer": "Lo más probable es que se le pueda aplicar un examen llamado Diagnóstico. En este deberá obtener una calificación mínima de 9 para poder recibir su certificado. Tendrias que solicitar un diagnostico y una vez entregado se podria ver si les permitio subirlo al sistema o no, si no les permitio no se calificara.",
+    "category": "Registro"
+  },
+  {
+    "id": "6",
+    "question": "Si un adulto me aparece con Secundaria (Nivel Avanzado) concluida en el sistema, ¿le puedo aplicar el Reconocimiento de Saberes?",
+    "answer": "No, y no se te puede contar para el servicio. Si solo tiene concluida la primaria, sí le podrías aplicar el de Secundaria; pero si no cuenta con el certificado de primaria, primero se tendría que solicitar un duplicado.",
+    "category": "Registro"
+  },
+  {
+    "id": "7",
+    "question": "Tengo jóvenes menores de 18 años, ¿puedo aplicarles el Reconocimiento de Saberes?",
+    "answer": "No, pero puedes aplicarles el examen Diagnóstico a los jóvenes de 15 años o más. Si obtienen una calificación de 9, lo aprueban y ese certificado puede contarse para tu servicio social.",
+    "category": "Registro"
+  },
+  {
+    "id": "8",
+    "question": "En el caso de que un adulto no cuente con los servicios básicos (luz, agua o teléfono) en su domicilio y, por lo tanto, carezca de los recibos correspondientes, ¿Cuál es el procedimiento para comprobar su residencia?",
+    "answer": "Cuando se comprueba la ausencia de servicios y la consecuente falta de recibos, se aplica una excepción. El solicitante deberá presentar únicamente: copia de su INE, CURP, Acta de Nacimiento y su respectiva Hoja de Registro. Si el trámite es para ingreso a secundaria, también deberá anexar el Certificado de Primaria.",
+    "category": "Registro"
+  },
+  {
+    "id": "9",
+    "question": "Si el adulto vive en EE. UU. o en el extranjero desde hace mucho tiempo, ¿cómo comprobamos su domicilio en México? ",
+    "answer": "Se aplica un plan especial: si el adulto va a visitar su casa en México, o si usted lo visitará en EE. UU., puede usar este método. Debe entregar: CURP, Acta de Nacimiento y la Hoja de Registro. En lugar de su recibo, puede usar un recibo de luz, agua o teléfono de la persona que lo recibirá o visitará (es decir, su recibo).",
+    "category": "Registro"
+  },
+  {
+    "id": "10",
+    "question": "Que información va en el Plan de Trabajo del servicio social y otros parecidos ",
+    "answer": "Depedencia: INSTITUTO ESTATAL DE EDUCACION PARA ADULTOS --- Programa para los de Septimo en adelante: Programa Nacional Alfabetizatec Brigradas TECNM en Movimiento Nacional por la Alfabetización ---- Programa para los que adelantan Servicio (1-6): CONSTRUYENDO TU SERVICIO SOCIAL EN ALFABETIZATEC ----- Objetivo: Alfabetizar y certificar la educación básica (primaria y secundaria) a personas mayores de 15 años. --- Responsable del programa donde se realiza el servicio social y cargo: Ing.Luis Moran Hernandez, coordinador de la zona 2406 --- Jefa de la oficina de servicio social del tecnologico: C.P. Margarita Infante Zapuche",
+    "category": "Registro"
+  }
+]

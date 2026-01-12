@@ -1,0 +1,39 @@
+[
+  {
+    "id": "ieea-nacional",
+    "title": "IEEA Estatal SLP",
+    "description": "Plataforma principal del Instituto Estatal de Educación para Adultos",
+    "url": "http://ieeaslp.inea.gob.mx/",
+    "category": "Oficial"
+  },
+  {
+    "id": "classroom",
+    "title": "Google Classroom TEC",
+    "description": "Aula virtual para entrega de documentos y actividades",
+    "url": "https://classroom.google.com/c/Njg5NDA2ODk1MTAy?cjc=2iaiaqt",
+    "category": "Educativo"
+  },
+  {
+    "id": "curp-gob",
+    "title": "Consulta CURP",
+    "description": "Página oficial para consultar y actualizar CURP",
+    "url": "https://www.gob.mx/curp",
+    "category": "Documentos"
+  },
+   {
+    "id": "ieea-rfe",
+    "title": "Generador de RFE",
+    "description": "Plataforma para generar el RFE de los Adultos",
+    "url": "http://168.255.120.53:8080/consultaRFE/",
+    "category": "Oficial"
+  },
+  {
+    "id": "avance-academico-ieea",
+    "title": "Consulta el avance academico",
+    "description": "Verificación de registro de avance academico en el INEA",
+    "url": "http://www.inea.gob.mx/servicios_en_linea/Consulta_avance_academico.html",
+    "category": "Oficial"
+  }
+
+ 
+]

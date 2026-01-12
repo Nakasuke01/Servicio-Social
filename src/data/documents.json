@@ -1,0 +1,65 @@
+[
+  {
+    "id": "formato-registro-ss",
+    "title": "Formato de Registro de Prestador de Servicio Social",
+    "description": "Formato oficial para el registro del prestador del servicio social",
+    "category": "Registros",
+    "format": "pdf",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=14wumThLzXKvqR7sipEMdjE1k4DzAlseb",
+    "institutions": ["IEEA"]
+  },
+  {
+    "id": "formato-registro",
+    "title": "Formato de Registro de Beneficiario",
+    "description": "Formato oficial para el registro de nuevos adultos en el programa",
+    "category": "Registros",
+    "format": "pdf",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1_-9ILRyeoL_1j4TM9-tGonVRR6a9uUTq",
+    "institutions": ["IEEA"]
+  },
+  {
+    "id": "hoja-respuestas",
+    "title": "Hoja de Respuestas para examen",
+    "description": "Formato para responder cualquier examen de primaria y secundaria",
+    "category": "Administrativos",
+    "format": "pdf",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1m9TfBBUx3qG4CGTU3opNBQq2If3_TDd9",
+    "institutions": ["IEEA"]
+  },
+  {
+    "id": "informe-alta",
+    "title": "Formato de Informe de altas",
+    "description": "Formato para seguimiento de altas",
+    "category": "Informes",
+    "format": "pdf",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1EcYSn74rhnlzSxXKB4ZkSlufoqz9O9dd",
+    "institutions": ["IEEA"]
+  },
+  {
+    "id": "reportes-bimestrales",
+    "title": "Formato de Reportes Bimestrales",
+    "description": "Formato oficial para registrar las actividades bimestrales de los prestadores que realizan el servicio social de manera anticipada.",
+    "category": "Informes",
+    "format": "word",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1jYeAvM6j6GahtSYFefjVTr6hSzi3oClR",
+    "institutions": ["Instituto Tecnológico"]
+  },
+  {
+    "id": "solicitudss-tecnologico",
+    "title": "Formato de Solicitud de Servicio Social (7° Semestre en adelante)",
+    "description": "Plantilla para solicitar el servicio social del Tecnológico para los de 7° semestre en adelante",
+    "category": "Informes",
+    "format": "word",
+    "downloadUrl": "https://docs.google.com/document/d/1EdQXJQ7l2CLrgI-RfDVndZFtzlE98dDN/export?format=docx",
+    "institutions": ["Instituto Tecnológico"]
+  },
+  {
+    "id": "plantrabajo-tecnologico",
+    "title": "Formato de Plan de Trabajo (7° Semestre en adelante)",
+    "description": "Plantilla para el plan de trabajo del prestador del Tecnológico para los de 7° semestre en adelante",
+    "category": "Informes",
+    "format": "word",
+    "downloadUrl": "https://docs.google.com/document/d/1MuHhFxx4fLMvOyA4vpFQ1goqawKHnQji/export?format=docx",
+    "institutions": ["Instituto Tecnológico"]
+  }
+]

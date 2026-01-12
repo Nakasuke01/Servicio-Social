@@ -1,0 +1,115 @@
+[
+  {
+    "id": "1",
+    "title": "Convocatoria Servicio Social 2026-2",
+    "description": "Apertura de registro para estudiantes de universidad",
+    "date": "2026-01-12",
+    "type": "convocatoria",
+    "featured": true,
+    "activeTooltip": true,
+    "content": [
+      "<h3>Convocatoria para Servicio Social 2026-2</h3>",
+      "<p>El Instituto Estatal de Educación para Adultos (IEEA) convoca a estudiantes de preparatoria y universidad a participar en nuestro programa de servicio social, brindando una oportunidad única de crecimiento profesional y humano.</p>",
+  
+      "<h4>Objetivo del Programa</h4>",
+      "<p>Nuestra misión es contribuir a la educación básica de adultos mediante el proceso de reconocimiento de saberes. El reto consiste en lograr que al menos 3 adultos completen su proceso y obtengan su certificación educativa oficial.</p>",
+  
+      "<h4>Requisitos de Participación</h4>",
+      "<ul>",
+        "<li>Estar cursando activamente la preparatoria o universidad.</li>",
+        "<li>Contar con disponibilidad de tiempo para seguimiento de casos.</li>",
+        "<li>Demostrar compromiso con la educación y el servicio a los adultos.</li>",
+        "<li>Presentar documentos personales completos (Identificación, Constancia de estudios, etc.).</li>",
+      "</ul>",
+  
+      "<h4>Beneficios para el Estudiante</h4>",
+      "<ul>",
+        "<li><strong>Experiencia práctica:</strong> Desarrollo directo en trabajo social y campo educativo.</li>",
+        "<li><strong>Impacto social:</strong> Contribución real al desarrollo de tu comunidad.</li>",
+        "<li><strong>Acreditación oficial:</strong> Obtención del certificado de servicio social liberado.</li>",
+        "<li><strong>Habilidades blandas:</strong> Fortalecimiento de la comunicación asertiva y habilidades interpersonales.</li>",
+      "</ul>"
+],
+    "images": [
+      "https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "downloadUrl": "#",
+    "internalLink": "/procesos"
+  },
+  {
+  "id": "2",
+  "title": "Entrega de Certificados Septiembre",
+  "description": "Ceremonia de entrega de certificados de educación básica",
+  "date": "2025-09-30",
+  "type": "noticia",
+  "featured": true,
+  "content": [
+    "<h3>Ceremonia de Entrega de Certificados</h3>",
+    "<p>Nos complace invitarlos a la ceremonia de entrega de certificados de educación básica correspondiente al mes de septiembre. Este evento es un reconocimiento al esfuerzo y perseverancia de nuestros estudiantes.</p>",
+    
+    "<h4>Detalles del Evento</h4>",
+    "<p><strong>Fecha:</strong> 30 de Septiembre, 2025<br>",
+    "<strong>Hora:</strong> 11:30 AM<br>",
+    "<strong>Lugar:</strong> Sala Don Rafael Piña</p>",
+    
+    "<h4>Certificados a Entregar</h4>",
+    "<ul>",
+      "<li><strong>Nivel Primaria:</strong> Certificados oficiales de conclusión de estudios.</li>",
+      "<li><strong>Nivel Secundaria:</strong> Certificados oficiales de educación básica.</li>",
+    "</ul>",
+    
+    "<h4>Programa del Evento</h4>",
+    "<ul>",
+      "<li><strong>11:30 AM:</strong> Registro de graduados y familiares.</li>",
+      "<li><strong>12:00 PM:</strong> Ceremonia de apertura y mensaje de bienvenida.</li>",
+      "<li><strong>12:20 PM:</strong> Entrega formal de documentos.</li>",
+      "<li><strong>12:35 PM:</strong> Entrega de Reconocimientos especiales al mérito.</li>",
+      "<li><strong>12:45 PM:</strong> Toma de fotografía grupal oficial.</li>",
+      "<li><strong>12:55 PM:</strong> Convivio y refrigerio.</li>",
+    "</ul>"
+  ],
+  "images": [
+    "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "https://images.pexels.com/photos/7944126/pexels-photo-7944126.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  ],
+  "internalLink": "/contacto"
+},
+  {
+  "id": "3",
+  "title": "Tips para una Entrevista Efectiva",
+  "description": "Consejos prácticos para realizar entrevistas de evaluación exitosas",
+  "date": "2026-01-13",
+  "type": "consejo",
+  "featured": true,
+  "content": [
+    "<h3>Consejos para Entrevistas de Evaluación</h3>",
+    "<p>Las entrevistas son la herramienta principal en el proceso de <strong>Reconocimiento de Saberes</strong>. Una buena ejecución permite captar la experiencia real del adulto que no siempre aparece en los documentos.</p>",
+
+    "<h4>1. Preparación Previa</h4>",
+    "<ul>",
+      "<li><strong>Estudio del caso:</strong> Revisa el expediente y la historia laboral del adulto antes de recibirlo.</li>",
+      "<li><strong>Guion de preguntas:</strong> Diseña preguntas enfocadas en '¿cómo lo hacía?' más que en '¿qué sabe?'.</li>",
+      "<li><strong>Entorno adecuado:</strong> Asegura un espacio privado, iluminado y libre de ruidos para reducir el nerviosismo.</li>",
+    "</ul>",
+
+    "<h4>2. Ejecución y Empatía</h4>",
+    "<ul>",
+      "<li><strong>Rapport inicial:</strong> Dedica los primeros minutos a romper el hielo para generar confianza.</li>",
+      "<li><strong>Escucha Activa:</strong> Evita interrumpir. Deja que el adulto narre su experiencia a su propio ritmo.</li>",
+      "<li><strong>Lenguaje No Verbal:</strong> Mantén contacto visual y una postura abierta para validar lo que te están contando.</li>",
+      "<li><strong>Preguntas de Seguimiento:</strong> Si algo no queda claro, pide ejemplos específicos de situaciones que haya resuelto en su trabajo.</li>",
+    "</ul>",
+
+    "<h4>3. Documentación y Cierre</h4>",
+    "<ul>",
+      "<li><strong>Registro Inmediato:</strong> Toma notas clave durante la entrevista, pero formaliza la información en el sistema lo antes posible para no perder detalles.</li>",
+      "<li><strong>Validación de Competencias:</strong> Cruza lo narrado con los estándares de conocimiento requeridos.</li>",
+      "<li><strong>Retroalimentación:</strong> Informa al adulto sobre los próximos pasos del proceso antes de que se retire.</li>",
+    "</ul>"
+  ],
+  "images": [
+    "https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg?auto=compress&cs=tinysrgb&w=800"
+  ]
+}
+]

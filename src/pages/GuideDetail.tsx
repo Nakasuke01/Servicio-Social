@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader } from '../components/UI/Card';
 import Button from '../components/UI/Button';
 import Disclaimer from '../components/UI/Disclaimer';
-import { ArrowLeft, Download, ExternalLink, Video } from 'lucide-react';
+import GuideContentRenderer from '../components/UI/GuideContentRenderer';
+import { ArrowLeft, Download, ExternalLink, Video, FileText } from 'lucide-react';
 import { guides } from '../data/content';
+import { generateGuidePDF } from '../utils/pdfGenerator';
 
 /**
  * Página de Detalle de Guía - Muestra una guía específica con todo su contenido
@@ -13,6 +15,21 @@ import { guides } from '../data/content';
 const GuideDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const guide = guides.find(g => g.id === id);
+  const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
+
+  const handleDownloadPDF = async () => {
+    if (!guide || isGeneratingPDF) return;
+
+    setIsGeneratingPDF(true);
+    try {
+      await generateGuidePDF(guide);
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+      alert('Hubo un error al generar el PDF. Por favor, intenta nuevamente.');
+    } finally {
+      setIsGeneratingPDF(false);
+    }
+  };
 
   if (!guide) {
     return (
@@ -84,37 +101,12 @@ const GuideDetail: React.FC = () => {
               <h2 className="text-2xl font-semibold text-white">Contenido de la Guía</h2>
             </CardHeader>
             <CardContent>
-              <div 
-                className="prose prose-lg prose-invert max-w-none [&>h1]:text-white [&>h2]:text-white [&>h3]:text-white [&>h4]:text-white [&>h5]:text-white [&>h6]:text-white [&>p]:text-gray-300 [&>li]:text-gray-300 [&>strong]:text-white [&>em]:text-gray-200"
-                dangerouslySetInnerHTML={{ __html: guide.content }}
-              />
+              <GuideContentRenderer content={guide.content} images={guide.images || []} />
             </CardContent>
           </Card>
         </section>
 
         {/* Images Section */}
-        {guide.images && guide.images.length > 0 && (
-          <section className="mb-8">
-            <Card>
-              <CardHeader>
-                <h2 className="text-2xl font-semibold text-white">Imágenes de Apoyo</h2>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {guide.images.map((image, index) => (
-                    <div key={index} className="rounded-lg overflow-hidden bg-gray-800">
-                      <img 
-                        src={image} 
-                        alt={`Imagen ${index + 1} de ${guide.title}`}
-                        className="w-full h-48 object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </section>
-        )}
 
         {/* Related Links */}
         {guide.relatedLinks && guide.relatedLinks.length > 0 && (
@@ -151,33 +143,52 @@ const GuideDetail: React.FC = () => {
         )}
 
         {/* Download Section */}
-        {guide.downloadUrl && (
-          <section className="mb-8">
-            <Card>
-              <CardContent>
-                <div className="text-center">
-                  <div className="mb-4">
-                    <div className="bg-blue-600 p-3 rounded-full w-16 h-16 mx-auto flex items-center justify-center">
-                      <Download className="h-8 w-8 text-white" />
-                    </div>
+        <section className="mb-8">
+          <Card>
+            <CardContent>
+              <div className="text-center">
+                <div className="mb-4">
+                  <div className="bg-blue-600 p-3 rounded-full w-16 h-16 mx-auto flex items-center justify-center">
+                    <FileText className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Descargar Documento</h3>
-                  <p className="text-gray-300 mb-6">
-                    Descarga el documento completo de esta guía para tenerlo disponible offline.
-                  </p>
-                <div className="flex justify-center">
-                  <a href={guide.downloadUrl} download className="inline-block w-full sm:w-auto">
-                    <Button size="lg" className="w-full sm:w-auto whitespace-nowrap">
-                      <Download className="h-4 w-4 mr-2" />
-                      Descargar Guía
-                    </Button>
-                  </a>
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Descargar Guía en PDF</h3>
+                <p className="text-gray-300 mb-6">
+                  Descarga esta guía en formato PDF con todo el contenido, imágenes y enlaces.
+                  Perfecta para consultar offline o imprimir.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    size="lg"
+                    className="w-full sm:w-auto whitespace-nowrap"
+                    onClick={handleDownloadPDF}
+                    disabled={isGeneratingPDF}
+                  >
+                    {isGeneratingPDF ? (
+                      <>
+                        <div className="animate-spin h-4 w-4 mr-2 border-2 border-white border-t-transparent rounded-full" />
+                        Generando PDF...
+                      </>
+                    ) : (
+                      <>
+                        <Download className="h-4 w-4 mr-2" />
+                        Descargar como PDF
+                      </>
+                    )}
+                  </Button>
+                  {guide.downloadUrl && (
+                    <a href={guide.downloadUrl} download className="inline-block w-full sm:w-auto">
+                      <Button size="lg" variant="outline" className="w-full sm:w-auto whitespace-nowrap">
+                        <Download className="h-4 w-4 mr-2" />
+                        Descargar Documento Original
+                      </Button>
+                    </a>
+                  )}
                 </div>
-              </CardContent>
-            </Card>
-          </section>
-        )}
+              </div>
+            </CardContent>
+          </Card>
+        </section>
 
         {/* Navigation */}
         <div className="text-center">

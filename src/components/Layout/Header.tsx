@@ -17,8 +17,7 @@ const Header: React.FC = () => {
     { name: 'Documentos', path: '/documentos' },
     { name: 'Sitios', path: '/sitios' },
     { name: 'Preguntas', path: '/preguntas' },
-    { name: 'Contáctanos', path: '/contacto' },
-    { name: 'Terminos', path: '/aviso-legal' },
+    { name: 'Contáctanos', path: '/contacto' }
   ];
 
   const isActiveLink = (path: string) => {

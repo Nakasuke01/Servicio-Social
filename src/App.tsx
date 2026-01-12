@@ -1,7 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
+import AnnouncementTooltip from './components/UI/AnnouncementTooltip';
+import { announcements } from './data/content';
 
 // Importar páginas
 import Home from './pages/Home';
@@ -13,20 +15,30 @@ import Sites from './pages/Sites';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import Legal from './pages/Legal';
+import Announcements from './pages/Announcements';
 import AnnouncementDetail from './pages/AnnouncementDetail';
 
-/**
- * Componente principal de la aplicación
- * Maneja el enrutamiento y la estructura general del sitio
- */
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
+  const activeAnnouncement = announcements.find(a => a.activeTooltip);
+
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-gray-900 flex flex-col">
-        {/* Header con navegación */}
+        {activeAnnouncement && <AnnouncementTooltip announcement={activeAnnouncement} />}
+
         <Header />
-        
-        {/* Contenido principal */}
+
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -39,7 +51,7 @@ function App() {
             <Route path="/contacto" element={<Contact />} />
             <Route path="/aviso-legal" element={<Legal />} />
             <Route path="/aviso-legal/:section" element={<Legal />} />
-            <Route path="/anuncios/:id" element={<AnnouncementDetail />} />
+            <Route path="/anuncios" element={<Announcements />} />
             <Route path="/anuncios/:id" element={<AnnouncementDetail />} />
             
             {/* Ruta 404 */}

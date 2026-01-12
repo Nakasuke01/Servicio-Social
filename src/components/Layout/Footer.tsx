@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { GraduationCap, Mail, Phone, MapPin } from 'lucide-react';
 
 /**
@@ -34,26 +33,16 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <h4 className="text-white font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  Inicio
-                </Link>
-              </li>
-              <li>
-                <Link to="/procesos" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  Procesos
-                </Link>
-              </li>
-              <li>
-                <Link to="/guias" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  Guías
-                </Link>
-              </li>
-              <li>
-                <Link to="/documentos" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  Documentos
-                </Link>
-              </li>
+              {['Inicio', 'Procesos', 'Guías', 'Documentos'].map((item) => (
+                <li key={item}>
+                  <a 
+                    href="#" 
+                    className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -62,24 +51,36 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-semibold mb-4">Recursos</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/sitios" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <a 
+                  href="/sitios" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
                   Sitios Web
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/preguntas" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <a 
+                  href="/preguntas" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
                   Preguntas Frecuentes
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/documentos" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <a 
+                  href="/documentos" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
                   Documentos
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/contacto" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <a 
+                  href="/contacto" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
                   Contacto
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -89,19 +90,28 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/aviso-legal" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <a 
+                  href="/aviso-legal" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
                   Aviso Legal
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/aviso-legal/privacidad" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <a 
+                  href="/aviso-legal/privacidad" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
                   Política de Privacidad
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/aviso-legal/terminos" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <a 
+                  href="/aviso-legal/terminos" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
                   Términos de Uso
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -113,17 +123,17 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-gray-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-400 text-sm">
-                  Calle Zaragoza #703<br />
-                  Zona Centro, Ciudad Valles, S.L.P.
+                  Av. Universidad #123<br />
+                  Col. Centro, Ciudad
                 </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-gray-400" />
-                <p className="text-gray-400 text-sm">+52 (481) 382-2540</p>
+                <p className="text-gray-400 text-sm">+52 (55) 1234-5678</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-gray-400" />
-                <p className="text-gray-400 text-sm">czvalles@inea.gob.mx</p>
+                <p className="text-gray-400 text-sm">contacto@ieea.gob.mx</p>
               </div>
             </div>
           </div>
@@ -132,7 +142,7 @@ const Footer: React.FC = () => {
         {/* Línea divisoria y créditos */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Desarrollado por César Emmanuel Medina Toledo. Todos los derechos reservados sobre el diseño y desarrollo de este sitio.
+            © {currentYear} Instituto Estatal de Educación para Adultos. Todos los derechos reservados.
           </p>
           <div className="mt-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
             <p className="text-gray-300 text-sm font-medium mb-2">
@@ -144,14 +154,14 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
               <a 
-                href="mailto:toledoemcesar@gmail.com" 
+                href="mailto:tu-email@ejemplo.com" 
                 className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
               >
                 <Mail className="h-4 w-4 mr-2" />
                 Contactar Desarrollador
               </a>
               <a 
-                href="https://wa.me/524811454356" 
+                href="https://wa.me/5215512345678" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors"

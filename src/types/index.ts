@@ -5,19 +5,15 @@ export interface Announcement {
   title: string;
   description: string;
   date: string;
-  type: 'convocatoria' | 'evento' | 'noticia';
+  type: 'convocatoria' | 'evento' | 'noticia' | 'informativo' | 'consejo';
   content?: string;
   images?: string[];
   videoUrl?: string;
   downloadUrl?: string;
   externalLink?: string;
   internalLink?: string;
-  content?: string;
-  images?: string[];
-  videoUrl?: string;
-  downloadUrl?: string;
-  externalLink?: string;
-  internalLink?: string;
+  featured?: boolean;
+  activeTooltip?: boolean;
 }
 
 export interface ProcessStep {
@@ -25,7 +21,7 @@ export interface ProcessStep {
   title: string;
   description: string;
   details?: string[];
-  relatedGuideId?: string | null  ;
+  relatedGuideIds?: string[];
 }
 
 export interface School {
@@ -43,6 +39,9 @@ export interface Guide {
   images?: string[];
   relatedLinks?: { title: string; url: string }[];
   downloadUrl?: string;
+  guideType?: 'documentos' | 'asesorias' | 'procedimientos' | 'evaluacion' | 'registro' | 'capacitacion';
+  institutions?: string[];
+  excludedInstitutions?: string[];
 }
 
 export interface Document {
@@ -50,8 +49,10 @@ export interface Document {
   title: string;
   description: string;
   category: string;
-  format: 'word' | 'pdf';
+  format: 'word' | 'pdf' | 'excel' | 'powerpoint' | 'sql' | 'access';
   downloadUrl: string;
+  institutions?: string[];
+  excludedInstitutions?: string[];
 }
 
 export interface UsefulSite {

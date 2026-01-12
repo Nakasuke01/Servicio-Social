@@ -3,58 +3,69 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader } from '../components/UI/Card';
 import Button from '../components/UI/Button';
 import Disclaimer from '../components/UI/Disclaimer';
-import { CheckCircle, Circle, ChevronRight, BookOpen } from 'lucide-react';
-import { schools } from '../data/content';
+import { ChevronRight, BookOpen, Target, Award, Users, CheckCircle } from 'lucide-react';
+import { schools, guides } from '../data/content';
 
-/**
- * Página de Procesos - Información detallada sobre procesos por escuela
- * Incluye objetivo general y procesos específicos por institución
- */
+interface ProcessStep {
+  id: number;
+  title: string;
+  description: string;
+  details?: string[];
+  relatedGuideId?: string;
+  relatedGuideIds?: string | string[];
+}
+
 const Processes: React.FC = () => {
   const [selectedSchool, setSelectedSchool] = useState(schools[0].id);
-  
   const currentSchool = schools.find(school => school.id === selectedSchool);
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Disclaimer */}
         <Disclaimer />
 
-        {/* Header */}
+        {/* Header Principal */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">Procesos del Servicio Social</h1>
+          <h1 className="text-4xl font-bold mb-4">Procesos del Servicio Social</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Conoce los pasos detallados para completar exitosamente tu servicio social 
-            y ayudar a los adultos a obtener su certificación educativa.
+            Conoce los pasos detallados para completar exitosamente tu servicio social.
           </p>
         </div>
 
-        {/* Objetivo General */}
+        {/* SECCIÓN RESTAURADA: OBJETIVO PRINCIPAL (Basada en image_2c53c4.png) */}
         <section className="mb-12">
-          <Card>
+          <Card className="bg-gray-800 border-gray-700">
             <CardHeader>
-              <h2 className="text-2xl font-bold text-white">Objetivo Principal</h2>
+              <div className="flex items-center gap-2">
+                <Target className="text-blue-500 h-6 w-6" />
+                <h2 className="text-2xl font-bold">Objetivo Principal</h2>
+              </div>
             </CardHeader>
             <CardContent>
-              <div className="bg-blue-900 p-6 rounded-lg border border-blue-700">
-                <p className="text-blue-200 text-lg mb-4">
-                  El objetivo principal de tu servicio social es lograr que <strong> con X numero de adultos</strong>, 
-                  apoyes a obtener <strong>3 certificados</strong>  de educación básica 
-                  mediante el proceso de <strong>Reconocimiento de Saberes</strong>.
+              <div className="bg-blue-900/30 border border-blue-800 rounded-xl p-8">
+                <p className="text-lg text-blue-100 mb-8 text-center">
+                  El objetivo principal de tu servicio social es lograr que con al menos <strong className="text-white text-xl">5 adultos</strong> ingresados (no es necesario que sean al mismo tiempo), apoyes a obtener <strong className="text-white text-xl">3 certificados</strong> de educación básica mediante el proceso de <strong className="text-white">Reconocimiento de Saberes</strong>.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400">3</div>
-                    <div className="text-blue-200">Certificados</div>
+                
+                {/* Stats del Objetivo */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
+                  <div className="flex flex-col items-center">
+                    <span className="text-4xl font-bold text-blue-400">3</span>
+                    <span className="text-gray-300 flex items-center gap-2 mt-2">
+                      <Award className="h-4 w-4" /> Certificados
+                    </span>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400">100%</div>
-                    <div className="text-blue-200">Reconocimiento</div>
+                  <div className="flex flex-col items-center border-y md:border-y-0 md:border-x border-blue-800 py-4 md:py-0">
+                    <span className="text-4xl font-bold text-green-400">100%</span>
+                    <span className="text-gray-300 flex items-center gap-2 mt-2">
+                      <CheckCircle className="h-4 w-4" /> Reconocimiento
+                    </span>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-orange-400">1</div>
-                    <div className="text-blue-200">Servicio Social</div>
+                  <div className="flex flex-col items-center">
+                    <span className="text-4xl font-bold text-orange-400">1</span>
+                    <span className="text-gray-300 flex items-center gap-2 mt-2">
+                      <Users className="h-4 w-4" /> Servicio Social
+                    </span>
                   </div>
                 </div>
               </div>
@@ -64,14 +75,9 @@ const Processes: React.FC = () => {
 
         {/* Selector de Escuela */}
         <section className="mb-8">
-          <Card>
+          <Card className="bg-gray-800 border-gray-700">
             <CardHeader>
-              <h2 className="text-2xl font-bold text-white mb-4">Procesos por Escuela</h2>
-              <p className="text-gray-300">
-                Selecciona tu institución educativa para ver los procesos específicos:
-              </p>
-            </CardHeader>
-            <CardContent>
+              <h2 className="text-2xl font-bold mb-4">Procesos por Escuela</h2>
               <div className="flex flex-wrap gap-3">
                 {schools.map((school) => (
                   <Button
@@ -83,122 +89,83 @@ const Processes: React.FC = () => {
                   </Button>
                 ))}
               </div>
-            </CardContent>
+            </CardHeader>
           </Card>
         </section>
 
-        {/* Procesos Detallados */}
+        {/* Listado de Pasos */}
         {currentSchool && (
           <section>
-            <Card>
+            <Card className="bg-gray-800 border-gray-700">
               <CardHeader>
-                <h2 className="text-2xl font-bold text-white">
-                  Procesos para {currentSchool.name}
-                </h2>
-                <p className="text-gray-300">
-                  Sigue estos pasos en orden para completar exitosamente tu servicio social:
-                </p>
+                <h2 className="text-2xl font-bold">Procesos para {currentSchool.name}</h2>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
-                  {currentSchool.processes.map((step, index) => (
-                    <div key={step.id} className="relative">
-                      {/* Línea conectora */}
-                      {index < currentSchool.processes.length - 1 && (
-                        <div className="absolute left-6 top-12 w-0.5 h-16 bg-gray-700"></div>
-                      )}
-                      
-                      <div className="flex items-start space-x-4">
-                        {/* Número del paso */}
-                        <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                          <span className="text-white font-bold">{step.id}</span>
-                        </div>
+                <div className="space-y-8">
+                  {(currentSchool.processes as ProcessStep[]).map((step, index) => {
+                    
+                    // Lógica para separar botones múltiples
+                    let listaGuias: string[] = [];
+                    const guiaData = step.relatedGuideIds || step.relatedGuideId;
+                    if (guiaData) {
+                      listaGuias = Array.isArray(guiaData) 
+                        ? guiaData 
+                        : guiaData.split(',').map(s => s.trim()).filter(s => s !== '');
+                    }
+
+                    return (
+                      <div key={step.id} className="relative">
+                        {/* Línea vertical (Diseño original) */}
+                        {index < currentSchool.processes.length - 1 && (
+                          <div className="absolute left-6 top-12 w-0.5 h-full bg-gray-700"></div>
+                        )}
                         
-                        {/* Contenido del paso */}
-                        <div className="flex-1 bg-gray-800 p-6 rounded-lg border border-gray-700">
-                          <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
-                          <p className="text-gray-300 mb-4">{step.description}</p>
+                        <div className="flex items-start space-x-4">
+                          {/* Círculo con número */}
+                          <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center z-10 shadow-lg">
+                            <span className="font-bold">{step.id}</span>
+                          </div>
                           
-                          {/* Detalles adicionales si existen */}
-                          {step.details && step.details.length > 0 && (
-                            <div className="mt-4">
-                              <h4 className="text-lg font-medium text-white mb-2">Detalles:</h4>
-                              <ul className="space-y-2">
-                                {step.details.map((detail, detailIndex) => (
-                                  <li key={detailIndex} className="flex items-start space-x-2">
-                                    <ChevronRight className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                                    <span 
-                                      className="text-gray-300" 
-                                      dangerouslySetInnerHTML={{ __html: detail }}
-                                    />
+                          {/* Tarjeta de Contenido (El segundo rectángulo) */}
+                          <div className="flex-1 bg-gray-900/50 p-6 rounded-xl border border-gray-700 mb-4">
+                            <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                            <p className="text-gray-400 mb-4">{step.description}</p>
+                            
+                            {/* Detalles con Chevron */}
+                            {step.details && (
+                              <ul className="space-y-2 mb-6">
+                                {step.details.map((detail, dIdx) => (
+                                  <li key={dIdx} className="flex items-start">
+                                    <ChevronRight className="h-4 w-4 text-blue-500 mt-1 mr-2 flex-shrink-0" />
+                                    <span className="text-gray-300" dangerouslySetInnerHTML={{ __html: detail }} />
                                   </li>
                                 ))}
                               </ul>
-                            </div>
-                          )}
-                          
-                          {/* Botón para guía relacionada */}
-                          {step.relatedGuideId && (
-                            <div className="mt-6 pt-4 border-t border-gray-700">
-                              <Link to={`/guias/${step.relatedGuideId}`}>
-                                <Button variant="secondary" size="sm" className="w-full sm:w-auto">
-                                  <BookOpen className="h-4 w-4 mr-2" />
-                                  Ver Guía Detallada
-                                </Button>
-                              </Link>
-                            </div>
-                          )}
+                            )}
+                            
+                            {/* BOTONES MULTIPLES */}
+                            {listaGuias.length > 0 && (
+                              <div className="mt-6 pt-4 border-t border-gray-800 flex flex-wrap gap-3">
+                                {listaGuias.map((gId) => {
+                                  const gInfo = guides.find(g => g.id === gId);
+                                  const textoBoton = gInfo ? gInfo.title : gId.replace(/-/g, ' ');
+
+                                  return (
+                                    <Link key={gId} to={`/guias/${gId}`}>
+                                      <Button variant="secondary" size="sm" className="bg-green-600 hover:bg-green-700 text-white">
+                                        <BookOpen className="h-4 w-4 mr-2" />
+                                        {textoBoton}
+                                      </Button>
+                                    </Link>
+                                  );
+                                })}
+                              </div>
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Pasos adicionales generales */}
-                <div className="mt-12 pt-8 border-t border-gray-700">
-                  <h3 className="text-xl font-semibold text-white mb-6">Pasos Complementarios</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="bg-gray-700 p-4 rounded-lg">
-                      <h4 className="font-semibold text-white mb-2">Verificación en Sistema</h4>
-                      <p className="text-gray-300 text-sm">
-                        Verificar que todos los datos estén correctos en el sistema IEEA 
-                        antes de proceder con los exámenes.
-                      </p>
-                    </div>
-                    
-                    <div className="bg-gray-700 p-4 rounded-lg">
-                      <h4 className="font-semibold text-white mb-2">Documentación Fotográfica</h4>
-                      <p className="text-gray-300 text-sm">
-                        Tomar fotografías de todos los registros y evidencias para 
-                        respaldo y documentación.
-                      </p>
-                    </div>
-                    
-                    <div className="bg-gray-700 p-4 rounded-lg">
-                      <h4 className="font-semibold text-white mb-2">Seguimiento de Exámenes</h4>
-                      <p className="text-gray-300 text-sm">
-                        Acompañar a los adultos durante el proceso de evaluación y 
-                        firmar evidencias solo si aprueban.
-                      </p>
-                    </div>
-                    
-                    <div className="bg-gray-700 p-4 rounded-lg">
-                      <h4 className="font-semibold text-white mb-2">Informes y Entrega</h4>
-                      <p className="text-gray-300 text-sm">
-                        Realizar informes bimestrales y entregar toda la papelería 
-                        tanto física como digital.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Recordatorio importante */}
-                <div className="mt-8 bg-orange-900 border border-orange-700 p-6 rounded-lg">
-                  <h4 className="font-semibold text-orange-200 mb-2">Recordatorio Importante</h4>
-                  <p className="text-orange-100">
-                    Recuerda subir todos los documentos digitales a la plataforma Google Classroom 
-                    asignada para tu escuela y mantener comunicación constante con los voluntarios del IEEA.
-                  </p>
+                    );
+                  })}
                 </div>
               </CardContent>
             </Card>

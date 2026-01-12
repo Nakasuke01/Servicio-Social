@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '../components/UI/Card';
 import Disclaimer from '../components/UI/Disclaimer';
-import { GraduationCap, Users, Award, BookOpen, Calendar, AlertCircle, StoreIcon } from 'lucide-react';
+import FeaturedCarousel from '../components/UI/FeaturedCarousel';
+import { GraduationCap, Users, Award, BookOpen, Calendar, AlertCircle } from 'lucide-react';
 import { announcements } from '../data/content';
 
 /**
@@ -14,7 +15,9 @@ const Home: React.FC = () => {
     switch (type) {
       case 'convocatoria': return <AlertCircle className="h-5 w-5 text-blue-400" />;
       case 'evento': return <Calendar className="h-5 w-5 text-green-400" />;
-      case 'noticia': return <BookOpen className="h-5 w-5 text-orange-400" />;
+      case 'noticia': return <BookOpen className="h-5 w-5 text-purple-400" />;
+      case 'consejo': return <Award className="h-5 w-5 text-orange-400" />;
+      case 'informativo': return <Users className="h-5 w-5 text-teal-400" />;
       default: return <AlertCircle className="h-5 w-5 text-gray-400" />;
     }
   };
@@ -46,19 +49,20 @@ const Home: React.FC = () => {
               de adultos mediante el reconocimiento de saberes
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://chat.whatsapp.com/Iq83Y7HZNKqHsUxeevohmk?mode=ems_copy_t" 
-                target="_blank" 
+              <a
+                href="https://chat.whatsapp.com/tu-enlace-de-grupo"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors text-center"
+                className="inline-flex items-center justify-center bg-white text-blue-900 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Comenzar Servicio Social
               </a>
-              <Link to="/procesos"
-              className="border border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-800 transition-colors text-center"
+              <a
+                href="/procesos"
+                className="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-800 transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-              Conocer Más
-              </Link>
+                Conocer Más
+              </a>
             </div>
           </div>
         </div>
@@ -67,6 +71,9 @@ const Home: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Disclaimer */}
         <Disclaimer />
+
+        {/* Featured Announcements Carousel */}
+        <FeaturedCarousel announcements={announcements} />
 
         {/* Introducción */}
         <section className="mb-16">
@@ -133,7 +140,7 @@ const Home: React.FC = () => {
                 <div className="bg-orange-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <BookOpen className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Alfabetización</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Alfabetización Oficial</h3>
                 <p className="text-gray-300">
                   Ofrecemos un programa especial para que los adultos aprendan a leer 
                   y escribir desde cero. Nuestras asesorías personalizadas te 
@@ -157,7 +164,7 @@ const Home: React.FC = () => {
                   Programa dirigido a personas que no saben leer ni escribir.
                 </p>
                 <div className="bg-gray-700 p-4 rounded-lg">
-                  <h4 className="text-lg font-medium text-white mb-2">Requisitos (Copias):</h4>
+                  <h4 className="text-lg font-medium text-white mb-2">Requisitos:</h4>
                   <ul className="text-gray-300 space-y-1">
                     <li>• Ser mayor de 15 años</li>
                     <li>• CURP (Certificada)</li>
@@ -177,7 +184,7 @@ const Home: React.FC = () => {
                   Para personas que saben leer y escribir pero no han terminado la primaria.
                 </p>
                 <div className="bg-gray-700 p-4 rounded-lg">
-                  <h4 className="text-lg font-medium text-white mb-2">Requisitos (Copias):</h4>
+                  <h4 className="text-lg font-medium text-white mb-2">Requisitos:</h4>
                   <ul className="text-gray-300 space-y-1">
                     <li>• Ser mayor de 18 años</li>
                     <li>• Saber leer y escribir</li>
@@ -199,7 +206,7 @@ const Home: React.FC = () => {
                   Para personas que tienen primaria completa pero no han terminado la secundaria.
                 </p>
                 <div className="bg-gray-700 p-4 rounded-lg">
-                  <h4 className="text-lg font-medium text-white mb-2">Requisitos (Copias):</h4>
+                  <h4 className="text-lg font-medium text-white mb-2">Requisitos:</h4>
                   <ul className="text-gray-300 space-y-1">
                     <li>• Ser mayor de 18 años</li>
                     <li>• Certificado de primaria</li>
@@ -221,11 +228,13 @@ const Home: React.FC = () => {
           <Card>
             <CardContent>
               <div className="space-y-4">
-                {announcements.map((announcement) => (
+                {announcements
+                  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                  .slice(0, 5)
+                  .map((announcement) => (
                   <Link
                     to={`/anuncios/${announcement.id}`}
-                    to={`/anuncios/${announcement.id}`}
-                    key={announcement.id} 
+                    key={announcement.id}
                     className="flex items-start space-x-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors cursor-pointer"
                   >
                     <div className="flex-shrink-0 mt-1">
@@ -250,6 +259,14 @@ const Home: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              <Link
+                to="/anuncios"
+                className="mt-6 inline-block w-full"
+              >
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105">
+                  Ver Todos los Anuncios
+                </button>
+              </Link>
             </CardContent>
           </Card>
         </section>
