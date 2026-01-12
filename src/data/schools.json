@@ -30,7 +30,7 @@
       "Explicar beneficios del programa",
       "Obtener compromiso de participación"
     ],
-    "relatedGuideId": ["generar-rfe", "validar-adulto-sistema","llenar-regEdu"]
+    "relatedGuideId": ["generar-rfe", "validar-adulto-sistema"]
   },
   {
     "id": 3,
@@ -46,7 +46,7 @@
       "Certificado de primaria (En caso de ser para Secundaria)",
       "Nota: Si aplicaste primaria y daras seguimiento a secundaria debes entregar todas las copias de nuevo"
     ],
-    "relatedGuideId": null
+    "relatedGuideId": "llenar-regEdu"
   },
   {
     "id": 4,
