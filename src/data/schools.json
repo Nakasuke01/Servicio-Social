@@ -11,9 +11,9 @@
       "CURP actualizada (Certificada)",
       "Acta de Nacimiento (Legible)",
       "INE (Obligatoria para los que hacen el servicio social)",
-      "Recibo de luz (no mayor a 3 meses)",
+      "Recibo de luz (no mayor a 3 meses en base a la aplicacion del primer examen)",
       "Fotografía (se toma en el momento con el celular)",
-      "Constancia de estudios y Carta de presentación (original y copia de cada uno) - <a href=\"https://forms.gle/AqT4D1yiCVb9Yrpr8\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-400 hover:text-blue-300 underline\">Solicitar aquí</a>",
+      "Constancia de estudios y Carta de presentación (original y copia de cada uno) - <a href=\"https://forms.gle/zUZPTYc5jamgeJfn8\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-400 hover:text-blue-300 underline\">Solicitar aquí</a>",
       "Formato de registro lleno - <a href=\"https://drive.google.com/uc?export=download&id=14wumThLzXKvqR7sipEMdjE1k4DzAlseb\" rel=\"noopener noreferrer\" class=\"text-blue-400 hover:text-blue-300 underline\">Descarga el Formato de Registro</a> "
     ],
     "relatedGuideId": "llenar-regMonae"
@@ -38,9 +38,9 @@
     "description": "Recopilar documentación (Copias) necesaria de cada adulto",
     "details": [
       "CURP del adulto (Certificada)",
-      "Acta de nacimiento",
-      "INE",
-      "Recibo de luz (no mayor a 3 meses)",
+      "Acta de nacimiento (Legible, evita fotos ya que al imprimir pueden perder calidad)",
+      "INE (Obligatoria)",
+      "Recibo de luz (no mayor a 3 meses en base a la aplicacion del examen)",
       "Fotografía (se toma en el momento con el celular)",
       "Formato de registro lleno - <a href=\"https://drive.google.com/uc?export=download&id=1_-9ILRyeoL_1j4TM9-tGonVRR6a9uUTq\" rel=\"noopener noreferrer\" class=\"text-blue-400 hover:text-blue-300 underline\">Descarga el Formato de Registro</a> ",
       "Certificado de primaria (En caso de ser para Secundaria)",
@@ -51,12 +51,13 @@
   {
     "id": 4,
     "title": "Aplicacion de examen de Reconocimiento de Saberes",
-    "description": "Ponerte de acuerdo con los adultos para programar hora,fecha y lugar de la aplicación",
+    "description": "Ponerte de acuerdo con los adultos para programar hora,fecha y lugar de la aplicación, recuerda que los examenes cambian cada mes",
     "details": [
       "Recibir el examen y hoja de respuestas del personal del IEEA para la aplicación - <a href=\"https://drive.google.com/uc?export=download&id=1m9TfBBUx3qG4CGTU3opNBQq2If3_TDd9\" rel=\"noopener noreferrer\" class=\"text-blue-400 hover:text-blue-300 underline\">Descarga el Formato de la Hoja de Respuestas</a> ",
       "Acudir a la ubicacion acordada con el adulto para la aplicación",
       "Pedirle a un tercer que les tome una foto de evidencia donde salgas junto el adulto haciendo el examen",
-      "Verifica que no falte ningun documento y todas las hojas esten llenas"
+      "Verifica que no falte ningun documento y todas las hojas esten llenas",
+      "Unete al siguiente grupo de WhatsApp para tener los examenes mas recientes (Los examenes cambian cada mes) - <a href=\"https://chat.whatsapp.com/DTUe1eO5KyjIncggFYloeD?mode=gi_t\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-400 hover:text-blue-300 underline\">Unete aquí</a>"
     ],
     "relatedGuideId": "llenar-hres"
   },
