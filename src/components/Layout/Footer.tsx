@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { contactInfo } from "../../data/content";
 import { GraduationCap, Mail, Phone, MapPin } from "lucide-react";
 
 /**
@@ -142,8 +143,13 @@ const Footer: React.FC = () => {
                 <p className="text-gray-400 text-sm">+52 (481) 381-0952</p>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-gray-400" />
-                <p className="text-gray-400 text-sm"> </p>
+                <Mail className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm break-all"
+                >
+                  {contactInfo.email}
+                </a>
               </div>
             </div>
           </div>

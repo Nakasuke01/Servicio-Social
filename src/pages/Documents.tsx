@@ -171,15 +171,15 @@ const Documents: React.FC = () => {
 
                     <div className="bg-gray-800 p-4 rounded-lg mb-6">
                       <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="text-gray-400">Formato:</span>
-                          <span className="text-white ml-2">
+                        <div className="min-w-0">
+                          <span className="block text-gray-400">Formato:</span>
+                          <span className="block text-white break-words">
                             {getFormatLabel(document.format)}
                           </span>
                         </div>
-                        <div>
-                          <span className="text-gray-400">Categoría:</span>
-                          <span className="text-white ml-2">{document.category}</span>
+                        <div className="min-w-0">
+                          <span className="block text-gray-400">Categoría:</span>
+                          <span className="block text-white break-words">{document.category}</span>
                         </div>
                       </div>
                     </div>

@@ -87,43 +87,53 @@ const Header: React.FC = () => {
             </button>
           </div>
 
-          {/* Menú móvil */}
-          {isMenuOpen && (
-            <div className="md:hidden border-t border-gray-800 py-3 max-h-[calc(100vh-4rem)] overflow-y-auto">
-              <nav className="grid grid-cols-2 gap-2">
-                {navigationItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
-                      isActiveLink(item.path)
-                        ? 'bg-blue-600 text-white shadow-lg'
-                        : 'bg-gray-800 text-gray-200 hover:bg-gray-700 hover:text-white'
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          )}
         </div>
       </header>
+
+      {/* Menú móvil: panel que sube desde abajo, encima de la barra inferior */}
+      {isMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-40" role="dialog" aria-modal="true" aria-label="Menú">
+          <button
+            className="absolute inset-0 w-full h-full bg-black/60 animate-fade-in"
+            aria-label="Cerrar menú"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          <div className="absolute inset-x-0 bottom-0 bg-gray-900 border-t border-gray-700 rounded-t-3xl px-4 pt-3 pb-[calc(5rem+env(safe-area-inset-bottom))] shadow-2xl max-h-[85vh] overflow-y-auto">
+            <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-gray-600" aria-hidden="true" />
+            <p className="px-1 mb-3 text-sm font-semibold text-gray-400">Todas las secciones</p>
+            <nav className="grid grid-cols-2 gap-2">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${
+                    isActiveLink(item.path)
+                      ? 'bg-blue-600 text-white shadow-lg'
+                      : 'bg-gray-800 text-gray-200 hover:bg-gray-700 hover:text-white'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+      )}
 
       {/* Barra de navegación inferior (solo celular) */}
       <nav
         aria-label="Navegación principal"
-        className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-gray-900/95 backdrop-blur border-t border-gray-800 pb-[env(safe-area-inset-bottom)]"
+        className="md:hidden fixed bottom-0 inset-x-0 z-[45] bg-gray-900/95 backdrop-blur border-t border-gray-800 pb-[env(safe-area-inset-bottom)]"
       >
         <div className="grid grid-cols-5">
           {bottomItems.map(({ name, path, icon: Icon }) => {
-            const active = isActiveLink(path);
+            const active = !isMenuOpen && isActiveLink(path);
             return (
               <Link
                 key={path}
                 to={path}
-                className={`flex flex-col items-center justify-center gap-1 py-2 text-[11px] font-medium transition-colors ${
+                className={`flex flex-col items-center justify-center gap-1 py-2 min-w-0 text-[11px] leading-tight font-medium transition-colors ${
                   active ? 'text-blue-400' : 'text-gray-400 hover:text-white'
                 }`}
               >
@@ -133,8 +143,9 @@ const Header: React.FC = () => {
             );
           })}
           <button
-            onClick={() => setIsMenuOpen(true)}
-            className={`flex flex-col items-center justify-center gap-1 py-2 text-[11px] font-medium transition-colors ${
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            className={`flex flex-col items-center justify-center gap-1 py-2 min-w-0 text-[11px] leading-tight font-medium transition-colors ${
               isMenuOpen ? 'text-blue-400' : 'text-gray-400 hover:text-white'
             }`}
           >

@@ -134,7 +134,7 @@ const AnnouncementTooltip: React.FC<AnnouncementTooltipProps> = ({ announcements
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-3 sm:p-4"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="announcement-modal-title"
@@ -147,7 +147,7 @@ const AnnouncementTooltip: React.FC<AnnouncementTooltipProps> = ({ announcements
       />
 
       <div
-        className="relative w-full max-w-sm sm:max-w-md max-h-[calc(100dvh-1.5rem)] overflow-y-auto bg-gray-800 rounded-2xl shadow-2xl border border-gray-700 animate-fade-in"
+        className="relative w-full max-w-sm sm:max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto bg-gray-800 rounded-2xl shadow-2xl border border-gray-700 animate-fade-in"
         onPointerEnter={(e) => e.pointerType === 'mouse' && setIsPaused(true)}
         onPointerLeave={(e) => e.pointerType === 'mouse' && setIsPaused(false)}
       >

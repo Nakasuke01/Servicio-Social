@@ -140,15 +140,17 @@ const Contact: React.FC = () => {
                         </a>
                       </div>
                       
-                      <div className="flex items-center space-x-2">
-                        <Mail className="h-4 w-4 text-blue-400" />
-                        <a 
-                          href={`mailto:${contact.ieea.email}`}
-                          className="text-blue-300 hover:text-blue-200 transition-colors text-sm break-all"
-                        >
-                          {contact.ieea.email}
-                        </a>
-                      </div>
+                      {contact.ieea.email && (
+                        <div className="flex items-center space-x-2">
+                          <Mail className="h-4 w-4 text-blue-400" />
+                          <a 
+                            href={`mailto:${contact.ieea.email}`}
+                            className="text-blue-300 hover:text-blue-200 transition-colors text-sm break-all"
+                          >
+                            {contact.ieea.email}
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -172,15 +174,17 @@ const Contact: React.FC = () => {
                         </a>
                       </div>
                       
-                      <div className="flex items-center space-x-2">
-                        <Mail className="h-4 w-4 text-green-400" />
-                        <a 
-                          href={`mailto:${contact.institution.email}`}
-                          className="text-green-300 hover:text-green-200 transition-colors text-sm break-all"
-                        >
-                          {contact.institution.email}
-                        </a>
-                      </div>
+                      {contact.institution.email && (
+                        <div className="flex items-center space-x-2">
+                          <Mail className="h-4 w-4 text-green-400" />
+                          <a 
+                            href={`mailto:${contact.institution.email}`}
+                            className="text-green-300 hover:text-green-200 transition-colors text-sm break-all"
+                          >
+                            {contact.institution.email}
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </div>
                   
