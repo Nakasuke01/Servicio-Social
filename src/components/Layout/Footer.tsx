@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { GraduationCap, Mail, Phone, MapPin } from "lucide-react";
 
 /**
@@ -10,10 +11,10 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-28 md:py-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Logo y descripción */}
-          <div className="md:col-span-1 space-y-4">
+          <div className="col-span-2 md:col-span-1 space-y-4">
             <div className="flex items-center space-x-3">
               <div className="bg-blue-600 p-2 rounded-lg">
                 <GraduationCap className="h-6 w-6 text-white" />
@@ -36,14 +37,19 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <h4 className="text-white font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2">
-              {["Inicio", "Procesos", "Guías", "Documentos"].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
+              {[
+                { name: "Inicio", path: "/" },
+                { name: "Procesos", path: "/procesos" },
+                { name: "Guías", path: "/guias" },
+                { name: "Documentos", path: "/documentos" },
+              ].map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
                     className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -120,7 +126,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Información de contacto */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h4 className="text-white font-semibold mb-4">Contacto</h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">

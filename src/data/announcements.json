@@ -1,13 +1,64 @@
 [
   {
+    "id": "4",
+    "title": "¡Tenemos nuevo grupo de WhatsApp!",
+    "description": "El grupo anterior ya no se usa. Únete al nuevo para no perderte ningún aviso de tu servicio social.",
+    "date": "2026-10-08",
+    "type": "informativo",
+    "featured": true,
+    "activeTooltip": true,
+    "highlights": [
+      "Avisos y fechas importantes del proceso",
+      "Resolución de dudas con coordinadores y compañeros",
+      "Formatos, guías y novedades al momento"
+    ],
+    "content": [
+      "<h3>Nuevo grupo de WhatsApp del Servicio Social</h3>",
+      "<p>El grupo de WhatsApp anterior ya no está en uso. A partir de ahora toda la comunicación del servicio social se hará en el nuevo grupo.</p>",
+      "<h4>¿Qué encontrarás en el grupo?</h4>",
+      "<ul>",
+        "<li>Avisos y fechas importantes del proceso.</li>",
+        "<li>Resolución de dudas con coordinadores y compañeros.</li>",
+        "<li>Formatos, guías y novedades al momento.</li>",
+      "</ul>",
+      "<p><a href=\"https://chat.whatsapp.com/HKS5lAhhE6O4q9QMBCqQ87\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-green-400 hover:text-green-300 underline\">Únete al nuevo grupo aquí</a></p>"
+    ],
+    "externalLink": "https://chat.whatsapp.com/HKS5lAhhE6O4q9QMBCqQ87"
+  },
+  {
+    "id": "5",
+    "title": "Constancia de estudios gratis",
+    "description": "Gracias al convenio, tramita tu constancia de estudios del Tec sin costo llenando un formulario.",
+    "date": "2026-10-08",
+    "type": "informativo",
+    "featured": true,
+    "activeTooltip": true,
+    "ctaLabel": "Llenar formulario",
+    "highlights": [
+      "Normalmente tiene costo, pero por el convenio es gratis",
+      "Al terminar, avísale de inmediato a la maestra Tere con tu nombre completo y semestre",
+      "Ella te dirá más o menos cuándo puedes pasar por tu constancia"
+    ],
+    "content": [
+      "<h3>Constancia de estudios gratis para el Servicio Social</h3>",
+      "<p>Gracias al convenio, puedes tramitar tu constancia de estudios en el Tecnológico sin costo. Normalmente este trámite tiene un costo, pero mediante este formulario se te entrega gratis.</p>",
+      "<h4>¿Cómo tramitarla?</h4>",
+      "<ul>",
+        "<li><strong>1.</strong> Llena el formulario: <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSewO6Crt923FgAPGMnw5x0h_r16JJQgX3vhw4s1v0bQwK7IHw/viewform?usp=send_form\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-400 hover:text-blue-300 underline\">Abrir formulario</a></li>",
+        "<li><strong>2.</strong> Inmediatamente avísale a la maestra Tere con tu <strong>nombre completo</strong> y <strong>semestre</strong> para que esté al tanto.</li>",
+        "<li><strong>3.</strong> Ella te dirá más o menos cuándo puedes pasar por tu constancia.</li>",
+      "</ul>"
+    ],
+    "externalLink": "https://docs.google.com/forms/d/e/1FAIpQLSewO6Crt923FgAPGMnw5x0h_r16JJQgX3vhw4s1v0bQwK7IHw/viewform?usp=send_form"
+  },
+  {
     "id": "1",
     "title": "Convocatoria Servicio Social 2026-2",
     "description": "Apertura de registro para estudiantes de universidad",
     "date": "2026-01-12",
     "type": "convocatoria",
     "featured": true,
-    "activeTooltip": true,
-    "content": [
+        "content": [
       "<h3>Convocatoria para Servicio Social 2026-2</h3>",
       "<p>El Instituto Estatal de Educación para Adultos (IEEA) convoca a estudiantes de preparatoria y universidad a participar en nuestro programa de servicio social, brindando una oportunidad única de crecimiento profesional y humano.</p>",
   

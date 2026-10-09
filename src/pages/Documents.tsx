@@ -67,12 +67,12 @@ const Documents: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <Disclaimer />
 
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">Documentos y Formatos</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Documentos y Formatos</h1>
+          <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
             Descarga todos los formatos necesarios para tu servicio social.
             Documentos oficiales en múltiples formatos listos para usar.
           </p>

@@ -35,14 +35,14 @@ const AnnouncementDetail: React.FC = () => {
   };
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('es-MX', {
+    return new Date(`${dateString}T00:00:00`).toLocaleDateString('es-MX', {
       year: 'numeric', month: 'long', day: 'numeric'
     });
   };
 
   return (
     <div className="min-h-screen bg-gray-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <Disclaimer />
         <div className="mb-8">
           <Link to="/" className="inline-flex items-center text-blue-400 hover:text-blue-300">
@@ -55,7 +55,7 @@ const AnnouncementDetail: React.FC = () => {
             <Calendar className="h-6 w-6 text-gray-400" />
             <span className="text-gray-300">{formatDate(announcement.date)}</span>
           </div>
-          <h1 className="text-4xl font-bold text-white mb-4">{announcement.title}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">{announcement.title}</h1>
         </div>
 
         {/* CONTENIDO DETALLADO */}

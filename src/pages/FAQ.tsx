@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from '../components/UI/Card';
 import Accordion from '../components/UI/Accordion';
 import Disclaimer from '../components/UI/Disclaimer';
 import { Search, HelpCircle } from 'lucide-react';
-import { faqs } from '../data/content';
+import { faqs, contactInfo } from '../data/content';
 
 /**
  * Página de Preguntas Frecuentes - FAQ con acordeones organizados por categoría
@@ -33,19 +33,19 @@ const FAQ: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         {/* Disclaimer */}
         <Disclaimer />
 
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <div className="flex justify-center mb-6">
             <div className="bg-blue-600 p-4 rounded-full">
               <HelpCircle className="h-12 w-12 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl font-bold text-white mb-4">Preguntas Frecuentes</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Preguntas Frecuentes</h1>
+          <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
             Encuentra respuestas a las preguntas más comunes sobre el servicio social en el IEEA. 
             Si no encuentras lo que buscas, no dudes en contactarnos.
           </p>
@@ -141,7 +141,7 @@ const FAQ: React.FC = () => {
                   <div className="bg-gray-800 p-6 rounded-lg">
                     <h3 className="text-lg font-semibold text-white mb-2">Contacto General</h3>
                     <p className="text-gray-300 text-sm mb-2">+52 (481) 382-2540</p>
-                    <p className="text-gray-300 text-sm">czvalles@inea.gob.mx</p>
+                    <p className="text-gray-300 text-sm break-all">{contactInfo.email}</p>
                   </div>
                   
                   <div className="bg-gray-800 p-6 rounded-lg">

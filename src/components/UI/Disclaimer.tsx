@@ -7,12 +7,12 @@ import { AlertTriangle } from 'lucide-react';
  */
 const Disclaimer: React.FC = () => {
   return (
-    <div className="bg-orange-900 border border-orange-700 rounded-lg p-4 mb-8">
+    <div className="bg-orange-950/70 border border-orange-800 rounded-xl p-3 sm:p-4 mb-6 sm:mb-8">
       <div className="flex items-start space-x-3">
         <AlertTriangle className="h-5 w-5 text-orange-400 mt-0.5 flex-shrink-0" />
         <div>
-          <h4 className="font-semibold text-orange-200 mb-1">Aviso Importante</h4>
-          <p className="text-orange-100 text-sm leading-relaxed">
+          <h4 className="font-semibold text-orange-200 text-sm sm:text-base mb-1">Aviso Importante</h4>
+          <p className="text-orange-100/90 text-xs sm:text-sm leading-relaxed">
             <strong>Proyecto personal independiente</strong>, sin afiliación oficial al IEEA ni al TecNM, 
             ni a cualquier otra institución. La información puede no estar actualizada; 
             verifique siempre en los portales oficiales de cada institución.

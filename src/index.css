@@ -2,6 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base: lectura cómoda en celular y escritorio */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-gray-900 text-gray-100 font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Evita que el celular haga zoom al escribir en buscadores y filtros */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  ::selection {
+    @apply bg-blue-600 text-white;
+  }
+}
+
+@layer utilities {
+  /* Oculta la barra de desplazamiento sin quitar el desplazamiento */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Enlaces dentro de textos que vienen de los archivos JSON */
+.rich-text a {
+  @apply font-semibold text-blue-400 underline underline-offset-2 decoration-blue-400/50 hover:text-blue-300;
+  overflow-wrap: anywhere;
+}
+.rich-text b,
+.rich-text strong {
+  @apply text-white;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -15,4 +60,19 @@
 
 .animate-fade-in {
   animation: fade-in 0.3s ease-out;
+}
+
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-progress {
+  animation-name: progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }

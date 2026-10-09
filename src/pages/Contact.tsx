@@ -12,14 +12,14 @@ import { contactInfo, schoolContacts } from '../data/content';
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         {/* Disclaimer */}
         <Disclaimer />
 
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">Contáctanos</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Contáctanos</h1>
+          <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
             Estamos aquí para apoyarte durante tu servicio social. 
             Encuentra toda la información de contacto organizada por institución.
           </p>
@@ -215,7 +215,7 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Horarios de Atención</h3>
                   <ul className="space-y-2 text-gray-300">
-                    <li>• <strong>IEEA:</strong> Lunes a Viernes, 8:00 AM - 6:00 PM</li>
+                    <li>• <strong>IEEA:</strong> Lunes a Viernes, 8:00 AM - 3:00 PM</li>
                     <li>• <strong>Instituciones:</strong> Según horarios escolares</li>
                     <li>• <strong>Emergencias:</strong> Contactar por correo electrónico</li>
                     <li>• <strong>Vacaciones:</strong> Atención reducida</li>

@@ -14,6 +14,8 @@ export interface Announcement {
   internalLink?: string;
   featured?: boolean;
   activeTooltip?: boolean;
+  highlights?: string[];
+  ctaLabel?: string;
 }
 
 export interface ProcessStep {

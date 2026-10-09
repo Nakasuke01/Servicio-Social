@@ -17,7 +17,7 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className={`
-      bg-gray-800 rounded-xl border border-gray-700 shadow-lg
+      bg-gray-800 rounded-2xl border border-gray-700 shadow-lg
       ${hover ? 'hover:shadow-xl hover:border-gray-600 transition-all duration-300' : ''}
       ${className}
     `}>
@@ -33,7 +33,7 @@ interface CardHeaderProps {
 
 export const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => {
   return (
-    <div className={`p-6 border-b border-gray-700 ${className}`}>
+    <div className={`p-4 sm:p-6 border-b border-gray-700 ${className}`}>
       {children}
     </div>
   );
@@ -46,7 +46,7 @@ interface CardContentProps {
 
 export const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => {
   return (
-    <div className={`p-6 ${className}`}>
+    <div className={`p-4 sm:p-6 ${className}`}>
       {children}
     </div>
   );
@@ -59,7 +59,7 @@ interface CardFooterProps {
 
 export const CardFooter: React.FC<CardFooterProps> = ({ children, className = '' }) => {
   return (
-    <div className={`p-6 border-t border-gray-700 ${className}`}>
+    <div className={`p-4 sm:p-6 border-t border-gray-700 ${className}`}>
       {children}
     </div>
   );

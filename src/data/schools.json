@@ -105,6 +105,17 @@
           "Firma y sellado de evaluaciones"
         ],
         "relatedGuideId": null
+      },
+      {
+        "id": 9,
+        "title": "Entrega del reporte final al IEEA",
+        "description": "Cerrar tu servicio social entregando tu reporte final al personal del IEEA",
+        "details": [
+          "Entregar al personal del IEEA una copia de tu reporte final con sus anexos: tus reportes 1 y 2 anteriores",
+          "Verifica que la copia esté completa, firmada y sellada antes de entregarla",
+          "Conserva tu original para los trámites que te pida tu escuela"
+        ],
+        "relatedGuideId": null
       }
     ]
   }

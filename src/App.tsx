@@ -29,13 +29,14 @@ function ScrollToTop() {
 }
 
 function App() {
-  const activeAnnouncement = announcements.find(a => a.activeTooltip);
+  // Avisos emergentes que rotan, en el orden de announcements.json
+  const tooltipAnnouncements = announcements.filter(a => a.activeTooltip);
 
   return (
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-gray-900 flex flex-col">
-        {activeAnnouncement && <AnnouncementTooltip announcement={activeAnnouncement} />}
+        {tooltipAnnouncements.length > 0 && <AnnouncementTooltip announcements={tooltipAnnouncements} />}
 
         <Header />
 
